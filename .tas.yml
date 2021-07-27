@@ -1,0 +1,12 @@
+--- 
+framework: mocha
+postmerge: 
+  pattern: 
+  - build/test/*.js
+postrun: 
+  - "node --version"
+premerge: 
+  - build/test/*.js
+prerun: 
+  - "npm ci"
+version: 2.0
