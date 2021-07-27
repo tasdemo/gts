@@ -8,5 +8,6 @@ postrun:
 premerge: 
   - build/test/*.js
 prerun: 
-  - "npm ci"
+  - npm ci
+  - npm run compile
 version: 2.0
