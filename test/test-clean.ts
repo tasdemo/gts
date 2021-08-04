@@ -59,6 +59,17 @@ describe('clean', () => {
       await clean(OPTIONS);
     });
   });
+  
+    it('should provide a demo ', () => {
+    const invalidJson = `
+    {
+      // hah, comments in JSON, what a world
+      compilerOptions: {outDir: '.'}
+    }`;
+    return withFixtures({'tsconfig.json': invalidJson}, async () => {
+      await clean(OPTIONS);
+    });
+  });
 
   it('should gracefully error if tsconfig has invalid JSON', () => {
     const invalidJson = "silly bear, this isn't JSON!";
