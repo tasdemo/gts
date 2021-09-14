@@ -1,13 +1,13 @@
 --- 
 framework: mocha
-postmerge: 
+postMerge: 
   pattern: 
   - build/test/*.js
-postrun: 
+postRun: 
   - "node --version"
-premerge: 
+preMerge: 
   - build/test/*.js
-prerun: 
+preRun: 
   - npm ci
   - npm run compile
 version: 2.0
